@@ -1,0 +1,20 @@
+-- Add items into ox_inventory/data/items.lua
+['auto_parts'] = {
+    label = 'Auto Parts',
+    weight = 5,
+},
+
+['chop_lockpick'] = {
+    label = 'Lockpick',
+    weight = 150,
+},
+
+['chop_torch'] = {
+    label = 'Torch',
+    weight = 275,
+},
+
+['chop_lugwrench'] = {
+    label = 'Lug Wrench',
+    weight = 225,
+},

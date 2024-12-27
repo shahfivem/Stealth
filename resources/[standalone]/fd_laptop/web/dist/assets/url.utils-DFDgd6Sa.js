@@ -1,0 +1,1 @@
+import{a3 as s}from"./index-CUz47RG4.js";const e=s(),i=n=>n.includes("http")||n.includes("nui:")?n:e.isDevEnv?`/icons/${n}`:`/web/dist/icons/${n}`,o=n=>e.isDevEnv?`/backgrounds/${n}`:`/web/dist/backgrounds/${n}`;export{o as b,i};

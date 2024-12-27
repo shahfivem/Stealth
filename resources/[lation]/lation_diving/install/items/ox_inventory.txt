@@ -1,0 +1,15 @@
+-- Add items into ox_inventory/data/items.lua
+
+['scuba_gear'] = {
+	label = 'Scuba Gear',
+	weight = 4750,
+	stack = false,
+	close = true
+},
+
+['diving_crate'] = {
+	label = 'Crate',
+	weight = 1500,
+	stack = true,
+	close = true
+},

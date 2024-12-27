@@ -1,0 +1,4 @@
+-- Add items into [qb]/qb-core/shared/items.lua
+
+scuba_gear = { name = 'scuba_gear', label = 'Scuba Gear', weight = 4750, type = 'item', image = 'scuba_gear.png', unique = false, useable = true, shouldClose = true, combinable = nil, description = 'This looks useful' },
+diving_crate = { name = 'diving_crate', label = 'Crate', weight = 1500, type = 'item', image = 'diving_crate.png', unique = false, useable = true, shouldClose = true, combinable = nil, description = 'I wonder what is in here' },

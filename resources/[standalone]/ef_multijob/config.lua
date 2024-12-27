@@ -1,0 +1,38 @@
+return {
+	---@type table<string, boolean> Jobs you want be to be included in the salary section
+	salaryJobs = {
+		["mechanic"] = false, -- Cayo Whitelisted Job
+		["uwu"] = true,
+		["sinners"] = true,
+		["tuner"] = true,
+		["yellowjack"] = true,
+		["medical"] = false,
+		["teapot"] = true,
+		["burgershot"] = true,
+		["galaxy"] = true,
+		["beanmachine"] = false,
+		["vunicorn"] = true,
+		["cardealer"] = true,
+		["pizzathis"] = true,
+		["bahama"] = true,
+		["henhouse"] = true,
+		["redline"] = true,
+		["hayes"] = true,
+		["harmony"] = true,
+		["lscustoms"] = true,
+		["police"] = true,
+		["ambulance"] = true,
+		["judge"] = true,
+		["lawyer"] = true,
+		["lspd"] = true,
+		["lsco"] = true,
+		["bcso"] = true,
+		["sasp"] = true,
+		["doc"] = true,
+		["comm"] = true,
+		["weedshop"] = true,
+		["mauto"] = true,
+		["flyauto"] = true,
+		["realestate"] = true,
+	}
+}

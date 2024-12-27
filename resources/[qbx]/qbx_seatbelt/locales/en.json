@@ -1,0 +1,18 @@
+{
+    "progress" : {
+        "attachHarness": "Attaching Race Harness",
+        "removeHarness": "Removing Race Harness"
+    },
+    "notify": {
+        "notInCar": "You're not in a car",
+        "seatbeltonn": "Seatbelt on",    
+        "seatbeltoff": "Seatbelt off",  
+        "harnessRemoved": "Harness has been removed",
+        "harnessAttached": "Harness has been attached"
+    },
+    "error": {
+        "seatbelton": "Take your seatbelt off first",
+        "harnesson": "Take your harness off first"
+    },
+    "toggleCommand": "Toggle Seatbelt"
+}

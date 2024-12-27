@@ -1,0 +1,356 @@
+return {
+    finance = {
+        minimumDown = 10,                     -- minimum percentage allowed down
+        maximumPayments = 24,                 -- maximum payments allowed
+        enable = true,                        -- Enables the financing system. Turning this off does not affect already financed vehicles
+        zone = vec3(-29.53, -1103.67, 26.42), -- Where the finance menu is located
+    },
+
+    enableFreeUseBuy = true, -- Allows players to buy from NPC shops
+    enableTestDrive = true,
+
+    vehicles = {
+
+        -- For the configuration below, it would first look for the vehicle in models.
+        -- If not found, it would check for the category in categories.
+        -- If the category is also not found, it would default to the default settings.
+        -- To disable a vehicle from being sold, define it within the blocklist.
+        default = 'pdm',
+
+        categories = {
+            boats = 'boats',
+            air = 'air',
+            -- super = {'pdm', 'pdm'},
+        },
+
+        models = {
+            -- zentorno = {'pdm', 'pdm'},
+
+            oppressor = 'pdm',
+            --- Sports
+            alpha = 'pdm',
+            banshee = 'pdm',
+            bestiagts = 'pdm',
+            buffalo = 'pdm',
+            buffalo2 = 'pdm',
+            carbonizzare = 'pdm',
+            comet2 = 'pdm',
+            comet3 = 'pdm',
+            comet4 = 'pdm',
+            comet5 = 'pdm',
+            coquette = 'pdm',
+            coquette4 = 'pdm',
+            drafter = 'pdm',
+            deveste = 'pdm',
+            elegy = 'pdm',
+            elegy2 = 'pdm',
+            feltzer2 = 'pdm',
+            flashgt = 'pdm',
+            furoregt = 'pdm',
+            gb200 = 'pdm',
+            komoda = 'pdm',
+            imorgon = 'pdm',
+            italigto = 'pdm',
+            jugular = 'pdm',
+            jester = 'pdm',
+            jester2 = 'pdm',
+            jester3 = 'pdm',
+            khamelion = 'pdm',
+            kuruma = 'pdm',
+            kuruma2 = 'pdm',
+            issi7 = 'pdm',
+            locust = 'pdm',
+            lynx = 'pdm',
+            massacro = 'pdm',
+            massacro2 = 'pdm',
+            neo = 'pdm',
+            neon = 'pdm',
+            ninef = 'pdm',
+            ninef2 = 'pdm',
+            omnis = 'pdm',
+            paragon = 'pdm',
+            pariah = 'pdm',
+            penumbra = 'pdm',
+            penumbra2 = 'pdm',
+            rapidgt = 'pdm',
+            rapidgt2 = 'pdm',
+            raptor = 'pdm',
+            revolter = 'pdm',
+            ruston = 'pdm',
+            schafter3 = 'pdm',
+            schafter4 = 'pdm',
+            schlagen = 'pdm',
+            schwarzer = 'pdm',
+            seven70 = 'pdm',
+            specter = 'pdm',
+            streiter = 'pdm',
+            sugoi = 'pdm',
+            sultan = 'pdm',
+            sultan2 = 'pdm',
+            surano = 'pdm',
+            tropos = 'pdm',
+            verlierer2 = 'pdm',
+            vstr = 'pdm',
+            italirsx = 'pdm',
+            zr350 = 'pdm',
+            calico = 'pdm',
+            futo2 = 'pdm',
+            euros = 'pdm',
+            jester4 = 'pdm',
+            remus = 'pdm',
+            comet6 = 'pdm',
+            growler = 'pdm',
+            vectre = 'pdm',
+            cypher = 'pdm',
+            sultan3 = 'pdm',
+            rt3000 = 'pdm',
+
+            --- Sports Classic
+            cheetah2 = 'pdm',
+
+            --- Super
+            adder = 'pdm',
+            autarch = 'pdm',
+            banshee2 = 'pdm',
+            bullet = 'pdm',
+            cheetah = 'pdm',
+            corsita = 'pdm',
+            cyclone = 'pdm',
+            entity2 = 'pdm',
+            entityxf = 'pdm',
+            emerus = 'pdm',
+            fmj = 'pdm',
+            furia = 'pdm',
+            gp1 = 'pdm',
+            infernus = 'pdm',
+            italigtb = 'pdm',
+            italigtb2 = 'pdm',
+            krieger = 'pdm',
+            le7b = 'pdm',
+            lm87 = 'pdm',
+            nero = 'pdm',
+            nero2 = 'pdm',
+            omnisegt = 'pdm',
+            osiris = 'pdm',
+            penetrator = 'pdm',
+            pfister811 = 'pdm',
+            prototipo = 'pdm',
+            reaper = 'pdm',
+            s80 = 'pdm',
+            sc1 = 'pdm',
+            sentinel4 = 'pdm',
+            sheava = 'pdm',
+            sm722 = 'pdm',
+            sultanrs = 'pdm',
+            t20 = 'pdm',
+            taipan = 'pdm',
+            tempesta = 'pdm',
+            tenf = 'pdm',
+            tenf2 = 'pdm',
+            torero2 = 'pdm',
+            tezeract = 'pdm',
+            thrax = 'pdm',
+            tigon = 'pdm',
+            turismor = 'pdm',
+            tyrant = 'pdm',
+            tyrus = 'pdm',
+            vacca = 'pdm',
+            vagner = 'pdm',
+            visione = 'pdm',
+            voltic = 'pdm',
+            voltic2 = 'pdm',
+            xa21 = 'pdm',
+            zentorno = 'pdm',
+            zorrusso = 'pdm',
+
+            --- Boats
+            squalo = 'boats',
+            marquis = 'boats',
+            seashark = 'boats',
+            seashark2 = 'boats',
+            seashark3 = 'boats',
+            jetmax = 'boats',
+            tropic = 'boats',
+            tropic2 = 'boats',
+            dinghy = 'boats',
+            dinghy2 = 'boats',
+            dinghy3 = 'boats',
+            dinghy4 = 'boats',
+            suntrap = 'boats',
+            speeder = 'boats',
+            speeder2 = 'boats',
+            longfin = 'boats',
+            toro = 'boats',
+            toro2 = 'boats',
+
+            --- Helicopters
+            buzzard2 = 'air',
+            frogger = 'air',
+            frogger2 = 'air',
+            maverick = 'air',
+            swift = 'air',
+            swift2 = 'air',
+            seasparrow = 'air',
+            seasparrow2 = 'air',
+            seasparrow3 = 'air',
+            supervolito = 'air',
+            supervolito2 = 'air',
+            volatus = 'air',
+            havok = 'air',
+
+            --- Planes
+            duster = 'air',
+            luxor = 'air',
+            luxor2 = 'air',
+            stunt = 'air',
+            mammatus = 'air',
+            velum = 'air',
+            velum2 = 'air',
+            shamal = 'air',
+            vestra = 'air',
+            dodo = 'air',
+            howard = 'air',
+            alphaz1 = 'air',
+            nimbus = 'air',
+            conada = 'air',
+        },
+
+        blocklist = {
+            'police',
+            'police2',
+            'police3',
+            'police4',
+        }
+    },
+
+    ---@type table<string, Dealership>
+    shops = {
+        pdm = {
+            type = 'free-use',
+            zone = {
+                shape = {
+                    vec3(-56.727394104004, -1086.2325439453, 26.0),
+                    vec3(-60.612808227539, -1096.7795410156, 26.0),
+                    vec3(-58.26834487915, -1100.572265625, 26.0),
+                    vec3(-35.927803039551, -1109.0034179688, 26.0),
+                    vec3(-34.427627563477, -1108.5111083984, 26.0),
+                    vec3(-32.02657699585, -1101.5877685547, 26.0),
+                    vec3(-33.342102050781, -1101.0377197266, 26.0),
+                    vec3(-31.292987823486, -1095.3717041016, 26.0)
+                },
+                size = vec3(3, 3, 4),
+                targetDistance = 1,
+            },
+            blip = {
+                label = 'Premium Deluxe Motorsport',
+                coords = vec3(-45.67, -1098.34, 26.42),
+                show = true,
+                sprite = 326,
+                color = 3,
+            },
+            categories = {
+                sportsclassics = 'Sports Classics',
+                sedans = 'Sedans',
+                coupes = 'Coupes',
+                suvs = 'SUVs',
+                offroad = 'Offroad',
+                muscle = 'Muscle',
+                compacts = 'Compacts',
+                motorcycles = 'Motorcycles',
+                vans = 'Vans',
+                cycles = 'Bicycles',
+                super = 'Super',
+                sports = 'Sports'
+            },
+            testDrive = {
+                limit = 5.0,
+                spawn = vec4(-7.84, -1081.35, 26.67, 121.83),
+                endBehavior = 'return'
+            },
+            returnLocation = vec3(-44.74, -1082.58, 26.68),
+            vehicleSpawn = vec4(-31.69, -1090.78, 26.42, 328.79),
+            showroomVehicles = {
+                [1] = { coords = vec4(-37.14, -1092.61, 27.3, 191.15), vehicle = 'revolter' },
+                [2] = { coords = vec4(-42.35, -1102.37, 27.3, 352.27), vehicle = 'issi7' },
+                [3] = { coords = vec4(-55.15, -1096.74, 27.3, 230.26), vehicle = 'neon' },
+                [4] = { coords = vec4(-48.06, -1092.08, 27.3, 291.25), vehicle = 'jester' },
+                [5] = { coords = vector4(-49.73, -1083.57, 27.3, 232.13), vehicle = 't20' },
+            },
+        },
+
+        boats = {
+            type = 'free-use',
+            zone = {
+                shape = {
+                    vec3(-729.39, -1315.84, 0),
+                    vec3(-766.81, -1360.11, 0),
+                    vec3(-754.21, -1371.49, 0),
+                    vec3(-716.94, -1326.88, 0)
+                },
+                size = vec3(8, 8, 6),
+                targetDistance = 10,
+            },
+            blip = {
+                label = 'Marina Shop',
+                coords = vec3(-738.25, -1334.38, 1.6),
+                show = true,
+                sprite = 410,
+                color = 3,
+            },
+            categories = {
+                boats = 'Boats'
+            },
+            testDrive = {
+                limit = 5.0,
+                spawn = vec4(-722.23, -1351.98, 0.14, 135.33),
+                endBehavior = 'return'
+            },
+            returnLocation = vec3(-714.34, -1343.31, 0.0),
+            vehicleSpawn = vec4(-727.87, -1353.1, -0.17, 137.09),
+            showroomVehicles = {
+                [1] = { coords = vec4(-727.05, -1326.59, -0.50, 229.5), vehicle = 'seashark' },
+                [2] = { coords = vec4(-732.84, -1333.5, -0.50, 229.5), vehicle = 'dinghy' },
+                [3] = { coords = vec4(-737.84, -1340.83, -0.50, 229.5), vehicle = 'speeder' },
+                [4] = { coords = vec4(-741.53, -1349.7, -0.50, 229.5), vehicle = 'marquis' },
+            },
+        },
+
+        -- air = {
+        --     type = 'free-use',
+        --     zone = {
+        --         shape = {
+        --             vec3(-1607.58, -3141.7, 12.99),
+        --             vec3(-1672.54, -3103.87, 12.99),
+        --             vec3(-1703.49, -3158.02, 12.99),
+        --             vec3(-1646.03, -3190.84, 12.99)
+        --         },
+        --         size = vec3(10, 10, 8),
+        --         targetDistance = 5,
+        --     },
+        --     blip = {
+        --         label = 'Air Shop',
+        --         coords = vec3(-1652.76, -3143.4, 13.99),
+        --         show = true,
+        --         sprite = 251,
+        --         color = 3,
+        --     },
+        --     categories = {
+        --         helicopters = 'Helicopters',
+        --         planes = 'Planes'
+        --     },
+        --     testDrive = {
+        --         limit = 5.0,
+        --         spawn = vec4(-1625.19, -3103.47, 13.94, 330.28),
+        --         endBehavior = 'return'
+        --     },
+        --     returnLocation = vec3(-1628.44, -3104.7, 13.94),
+        --     vehicleSpawn = vec4(-1617.49, -3086.17, 13.94, 329.2),
+        --     showroomVehicles = {
+        --         [1] = { coords = vec4(-1651.36, -3162.66, 12.99, 346.89), vehicle = 'volatus' },
+        --         [2] = { coords = vec4(-1668.53, -3152.56, 12.99, 303.22), vehicle = 'luxor2' },
+        --         [3] = { coords = vec4(-1632.02, -3144.48, 12.99, 31.08), vehicle = 'nimbus' },
+        --         [4] = { coords = vec4(-1663.74, -3126.32, 12.99, 275.03), vehicle = 'frogger' },
+        --     },
+        -- },
+    },
+}

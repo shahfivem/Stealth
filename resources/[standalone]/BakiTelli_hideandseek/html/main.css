@@ -1,0 +1,1469 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+@font-face {
+  font-family: TT Lakes Neuebold;
+  src: url("./font/TTLakesNeue-Bold.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: TT Lakes Neuemid;
+  src: url("./font/TTLakesNeue-Medium.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: TT Lakes Neuedbold;
+  src: url("./font/TTLakesNeue-DBold.ttf") format("truetype");
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+  font-family: "Barlow";
+}
+
+.all-CSS {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./img/bg.png);
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+  animation: opacity 0.15s forwards;
+}
+.Buttom {
+  display: flex;
+  width: 100vw;
+  height: 9.9vw;
+  margin-top: 0.5vw;
+}
+
+.title {
+  width: auto;
+  height: 4.166666666666667vw;
+  margin-top: 3vw;
+  margin-left: 2.6vw;
+  font-family: "TT Lakes Neuebold";
+  font-style: normal;
+  font-size: 2.97vw;
+  color: #ffffff;
+}
+
+.title t {
+  font-family: "TT Lakes Neuebold";
+  font-style: normal;
+  font-size: 2.97vw;
+  color: #ffffff;
+  opacity: 0.6;
+}
+
+.title2 {
+  margin-top: 4vw;
+  margin-left: 1.1vw;
+  width: 8.5vw;
+  height: 2.5vw;
+  line-height: 2.2vw;
+  font-family: "TT Lakes Neuedbold";
+  font-style: normal;
+  font-size: 1.8vw;
+  color: rgba(255, 255, 255, 0.37);
+  background: rgba(255, 255, 255, 0.1);
+  border: 0.059523958333333335vw solid rgba(255, 255, 255, 0.13);
+  border-radius: 0.23809531250000002vw;
+  text-align: center;
+}
+
+.buttomvector {
+  margin-left: 2vw;
+  margin-top: 4.6vw;
+  width: 43.072916666666664vw;
+  height: 1.25vw;
+}
+
+.profilebox {
+  display: flex;
+  margin-top: 3.6vw;
+  margin-left: 2vw;
+  width: 19vw;
+  height: 3.38vw;
+}
+
+.profilevector {
+  margin-top: 0.15vw;
+  width: 3.17vw;
+  height: 3.0308333333333335vw;
+}
+
+.profilenamebox {
+  display: block;
+  margin-left: 1.5vw;
+  width: 14vw;
+  height: 3.38vw;
+}
+
+.Profilename {
+  width: 14vw;
+  height: 1.8vw;
+  font-family: "TT Lakes Neuebold";
+  font-style: normal;
+  line-height: 1.5vw;
+  font-size: 1.3vw;
+  color: #ffffff;
+}
+
+.profilepricebox {
+  display: flex;
+  width: 12.6vw;
+  height: 1.56vw;
+}
+
+.walletvector {
+  margin-top: 0.2vw;
+  width: 1.325vw;
+  height: 1.178125vw;
+}
+
+.profilewalletprice {
+  width: 3.6979166666666665vw;
+  height: 1.09375vw;
+  margin-top: 0.1vw;
+  margin-left: 0.5vw;
+  font-family: "TT Lakes Neuedbold";
+  font-style: normal;
+  font-size: 0.8333333333333334vw;
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.creditvector {
+  margin-top: 0.2vw;
+  margin-left: 1.5vw;
+  width: 1.325vw;
+  height: 1.178125vw;
+}
+
+.profilecreditprice {
+  width: 3.6979166666666665vw;
+  height: 1.09375vw;
+  margin-top: 0.1vw;
+  margin-left: 0.5vw;
+  font-family: "TT Lakes Neuedbold";
+  font-style: normal;
+  font-size: 0.8333333333333334vw;
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.Center-Side {
+  display: flex;
+  width: 95%;
+  margin-left: 2.5%;
+  height: 40.7vw;
+}
+
+.RightSide {
+  /* border: 0.1vw solid gray; */
+  height: 100%;
+  width: 24.4375vw;
+}
+
+.LeftSide {
+  width: 61.0938vw;
+  height: 100%;
+  /* border: 0.1vw solid pink; */
+  margin-left: 9.5vw;
+}
+
+.MyLobyDetailsPhotoBG {
+  width: 100%;
+  height: 15.8333vw;
+  border-radius: 0.3646vw;
+  border: 0.1042vw solid #2d2d38;
+  background: radial-gradient(
+    89.58% 89.58% at 50% 50%,
+    rgba(91, 91, 91, 0.299) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.MyLobbyDetailsTitle {
+  width: 100%;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: Oswald;
+  font-size: 1.25vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  margin-top: 0.4vw;
+}
+
+.MyLobbyDetailsTitle t {
+  color: #fff;
+  font-family: Oswald;
+  font-size: 1.25vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.MyLobbyDetailsPhoto {
+  border-radius: 0.4786vw;
+  width: 90%;
+  height: 11.7708vw;
+  margin-left: 5%;
+  margin-top: 0.5vw;
+  border-radius: 0.4786vw;
+  border: 0.3419vw solid rgba(32, 32, 45, 0.46);
+  background-image: url("./img/exampleLobbyMap.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.MyLobbyDetailsPhotoSideTitle {
+  width: 85.5%;
+  margin-top: 0.3vw;
+  margin-left: 8%;
+  text-align: left;
+  color: #fff;
+  font-family: Oswald;
+  font-size: 1.25vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.MyLobbyDetailsPhotoSideTitle p {
+  color: rgba(255, 255, 255, 0.46);
+  font-family: Oswald;
+  font-size: 0.8333vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.MyLobbyAltDetails {
+  width: 100%;
+  height: 10.9896vw;
+  margin-top: 1.5vw;
+}
+
+.map-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3vw;
+  height: 3vw;
+  background: radial-gradient(
+    96.08% 96.08% at 50% 50%,
+    #fff 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  border-radius: 0.3vw;
+}
+
+.fa-map {
+  font-size: 1.3vw;
+  color: rgba(0, 0, 0, 0.59);
+}
+
+.map-title {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.05vw;
+  margin-left: 4vw;
+  margin-top: -2.8vw;
+  color: #a1a1a1;
+}
+
+.map-title-max {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.25vw;
+  margin-left: 4vw;
+  color: #ffffff;
+}
+
+.map-info {
+  width: 2.15vw;
+  height: 2.15vw;
+  margin-top: -0.7vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  float: right;
+  background-image: url(./img/info.png);
+}
+
+.map-i {
+  font-family: "Barlow";
+  font-style: normal;
+  margin-top: 0.75vw;
+  font-weight: 600;
+  font-size: 1vw;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.map-iy {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1vw;
+  color: rgba(255, 255, 255, 0.47);
+}
+
+.next {
+  width: 48%;
+  height: 2.25vw;
+  background: radial-gradient(
+    89.58% 89.58% at 50% 50%,
+    rgba(9, 9, 13, 0.6) 0%,
+    rgba(9, 9, 13, 0) 100%
+  );
+  margin-top: 1.35vw;
+  border: 0.1vw solid #2d2d38;
+  border-radius: 0.25vw;
+  font-family: "Barlow", "FontAwesome";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1vw;
+  transition: 0.5s;
+  line-height: 2vw;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.2);
+  transition: 0.3s;
+}
+
+.previous {
+  width: 48%;
+  height: 2.25vw;
+  margin-top: -2.3vw;
+  margin-left: 12.4vw;
+  font-family: "Barlow", "FontAwesome";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1vw;
+  line-height: 2vw;
+  text-align: center;
+  transition: 0.5s;
+  color: rgba(255, 255, 255, 0.2);
+  background: radial-gradient(
+    89.58% 89.58% at 50% 50%,
+    rgba(9, 9, 13, 0.6) 0%,
+    rgba(9, 9, 13, 0) 100%
+  );
+  border: 0.1vw solid #2d2d38;
+  border-radius: 0.25vw;
+  transition: 0.3s;
+}
+
+.MyLobbyAltTimers {
+  width: 100%;
+  height: 10.7292vw;
+  margin-top: 1.5vw;
+  border-radius: 0.3646vw;
+  border: 0.1042vw solid #2d2d38;
+  background: radial-gradient(
+    89.58% 89.58% at 50% 50%,
+    rgba(34, 34, 34, 0.6) 0%,
+    rgba(9, 9, 13, 0) 100%
+  );
+}
+
+.TimerMenu {
+  width: 21.5104vw;
+  height: 7.7604vw;
+  margin-top: 1.0417vw;
+  margin-left: 0.9635vw;
+}
+
+.TimerWarning {
+  display: flex;
+  width: 21.5104vw;
+  margin-top: 0.425vw;
+  margin-left: 0.9896vw;
+}
+
+.TimerWarning > .icon {
+  width: 0.9282vw;
+  height: 0.8333vw;
+  background-image: url("./img/info.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.TimerWarning > .text {
+  color: rgba(255, 255, 255, 0.47);
+  font-family: Barlow;
+  font-size: 0.5208vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.0104vw;
+  width: 20.2604vw;
+  margin-left: 0.2698vw;
+  margin-top: 0.1vw;
+  overflow: hidden;
+  height: 0.6508vw;
+}
+
+.Timer1 {
+  display: flex;
+  width: 100%;
+  height: 2.2396vw;
+}
+
+.Time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6.8229vw;
+  height: 100%;
+  border-radius: 0.1563vw;
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.28);
+  font-family: Barlow;
+  font-size: 0.8643vw;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-left: 0.3208vw;
+  transition: 0.4s;
+}
+
+.Time:nth-child(1) {
+  margin-left: 0;
+}
+
+.MainTimer {
+  display: flex;
+  width: 12.3438vw;
+  height: 2.2396vw;
+  margin-left: 4.5833vw;
+  margin-top: 0.4208vw;
+  color: rgba(255, 255, 255, 0.45);
+  text-align: center;
+  font-family: Barlow;
+  font-size: 0.8643vw;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.TimeFunc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.1563vw;
+  border: 0.0521vw solid rgba(255, 255, 255, 0.17);
+  background: rgba(255, 255, 255, 0.15);
+  width: 2.2917vw;
+  height: 2.2396vw;
+  font-size: 1.4643vw;
+  transition: 0.3s;
+}
+
+.CurrentTime {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6.8229vw;
+  height: 2.2396vw;
+  border-radius: 0.1563vw;
+  border: 0.0521vw solid rgba(255, 255, 255, 0.17);
+  background: rgba(255, 255, 255, 0.15);
+  margin-left: 0.4vw;
+}
+
+.LeftSidex {
+  width: 100%;
+  height: 100%;
+}
+
+.one {
+  border-radius: 0.3342vw;
+  border: 0.0955vw solid #ffffff36;
+  background: radial-gradient(
+      73.99% 95.61% at 50.05% 100%,
+      rgba(118, 118, 118, 0.2) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    radial-gradient(
+      89.58% 89.58% at 50% 50%,
+      rgba(9, 9, 13, 0.6) 0%,
+      rgba(9, 9, 13, 0) 100%
+    );
+}
+
+.ServersTop {
+  display: flex;
+  height: 1.7708vw;
+  width: 100%;
+  margin-top: 1.3938vw;
+}
+
+.ServersTopItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: "Barlow";
+  font-size: 0.9649vw;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 8.074vw;
+}
+
+.ServersTopItem t {
+  color: #fff;
+  font-family: "FontAwesome";
+  font-size: 0.7649vw;
+  margin-left: 0.1vw;
+}
+
+.CreateLobby {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 11.0938vw;
+  margin-left: 3.45vw;
+  border-radius: 0.1335vw;
+  border: 0.1335vw solid rgba(0, 0, 0, 0.15);
+  background: linear-gradient(
+    180deg,
+    #c99649 0%,
+    rgba(201, 150, 73, 0) 142.86%
+  );
+  color: rgba(0, 0, 0, 0.48);
+  text-align: center;
+  font-family: Barlow;
+  font-size: 0.9349vw;
+  font-style: normal;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.Servers {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  margin-top: 1.3938vw;
+  height: 35.3596vw;
+  width: 100%;
+}
+
+.Server {
+  display: flex;
+  align-items: center;
+  height: 4.4775vw;
+  width: 100%;
+  margin-top: 0.6771vw;
+  border-radius: 0.3339vw 0.3339vw 0px 0px;
+  background: rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.xxs {
+  background: rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.Server:nth-child(1) {
+  margin-top: 0;
+}
+
+.ServerProfile {
+  width: 3.8262vw;
+  height: 3.8379vw;
+  margin-left: 2.049vw;
+  border-radius: 0.7339vw;
+  border: 0.1335vw solid rgba(17, 37, 48, 0.2);
+  background-image: url("./img/exampleServerProfile.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ServerItemText {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: Barlow;
+  font-size: 1.25vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 99.5%; /* 23.88px */
+  width: 8vw;
+  height: 1.4vw;
+  margin-left: 1vw;
+}
+
+.ServerJoin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7.9415vw;
+  height: 1.791vw;
+  border-radius: 0.1335vw;
+  border: 0.1335vw solid rgba(0, 0, 0, 0.15);
+  background: linear-gradient(
+    180deg,
+    #49c96d 0%,
+    rgba(73, 201, 109, 0) 142.86%
+  );
+
+  color: rgba(0, 0, 0, 0.48);
+  text-align: center;
+  font-family: "Barlow", "FontAwesome";
+  font-size: 0.9349vw;
+  font-style: normal;
+  font-weight: 700;
+  margin-left: 5vw;
+  transition: 0.3s;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.red-team {
+  width: 100%;
+  height: 13.5vw;
+
+  border: 0.1vw solid #26262678;
+  background: radial-gradient(
+      73.99% 95.61% at 50.05% 100%,
+      rgba(218, 68, 68, 0.108) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    radial-gradient(
+      89.58% 89.58% at 50% 50%,
+      rgba(9, 9, 13, 0.6) 0%,
+      rgba(9, 9, 13, 0) 100%
+    );
+  border-radius: 0.4vw;
+}
+
+.starter {
+  width: 100%;
+  height: 6vw;
+  margin-top: 3.7vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blue-team {
+  width: 100%;
+  height: 13.5vw;
+  margin-top: 3.7vw;
+  border: 0.1vw solid #26262678;
+  background: radial-gradient(
+      73.99% 95.61% at 50.05% 100%,
+      rgba(47, 98, 231, 0.108) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    radial-gradient(
+      89.58% 89.58% at 50% 50%,
+      rgba(9, 9, 13, 0.6) 0%,
+      rgba(9, 9, 13, 0) 100%
+    );
+  border-radius: 0.4vw;
+}
+
+.disabled {
+  width: 18%;
+  height: 47%;
+  font-family: "Barlow", "FontAwesome";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.05vw;
+  line-height: 2.5vw;
+  text-align: center;
+  color: #cb4040;
+  transition: 0.5s;
+  background: radial-gradient(
+    108.77% 108.77% at 50% 50%,
+    rgba(198, 50, 50, 0.5) 0%,
+    rgba(198, 50, 50, 0) 100%
+  );
+  border: 0.17vw solid #cb4040;
+  border-radius: 0.1vw;
+}
+
+.start {
+  width: 37%;
+  height: 47%;
+  background: rgba(123, 245, 2, 0.1);
+  border: 0.15vw solid #7bf502;
+  border-radius: 0.1vw;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.22vw;
+  margin-left: 1vw;
+  transition: 0.5s;
+  line-height: 2.55vw;
+  text-align: center;
+  color: #7bf502;
+}
+
+.disabled:hover,
+.start:hover {
+  cursor: pointer;
+  scale: 1.02;
+}
+
+.team-top {
+  width: 92.5%;
+  margin-left: 3.75%;
+  height: 27.5%;
+}
+
+.team-top-text {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.29vw;
+  line-height: 90%;
+  display: flex;
+  line-height: 5.5vw;
+  color: #da4444;
+}
+
+.team-top-text span {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9vw;
+  margin-left: 1vw;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.26);
+}
+
+.team-top-text-total {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.05vw;
+  margin-top: -3.8vw;
+  float: right;
+  color: rgba(255, 255, 255, 0.28);
+}
+
+.blue-particle {
+  display: flex;
+  position: absolute;
+  width: 44.95vw;
+  height: 13.5vw;
+  background-image: url(./img/b-blue-particle.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.red-particle {
+  display: flex;
+  position: absolute;
+  width: 44.95vw;
+  height: 13.5vw;
+  background-image: url(./img/b-red-particle.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.team-players {
+  width: 92.5%;
+  margin-left: 3.75%;
+  height: 58.25%;
+  margin-top: 3%;
+}
+
+.team-player {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  width: 15%;
+  height: 100%;
+  margin-top: -1.15vw;
+  float: left;
+}
+
+.profilePhotoImg {
+  position: relative;
+  width: 4.192vw;
+  height: 4.1792vw;
+  margin-left: 1.8vw;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 4.7vw;
+  transition: 0.3s;
+}
+
+.profilePhotoImg::before {
+  content: "";
+  position: absolute;
+  display: flex;
+  top: -0.3385vw;
+  left: -0.3385vw;
+  right: -0.3385vw;
+  bottom: -0.3385vw;
+  border: 0.0521vw solid #2f62e7;
+  border-radius: 10vw;
+  box-sizing: border-box;
+}
+
+#red .profilePhotoImg::before {
+  content: "";
+  position: absolute;
+  display: flex;
+  top: -0.3385vw;
+  left: -0.3385vw;
+  right: -0.3385vw;
+  bottom: -0.3385vw;
+  border: 0.0521vw solid #d24a4a;
+  border-radius: 10vw;
+  box-sizing: border-box;
+}
+
+.team-name {
+  width: 100%;
+  height: 1vw;
+  overflow: hidden;
+  text-align: center;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.7vw;
+  margin-top: 0.5vw;
+  margin-left: -0.18vw;
+  text-align: center;
+  color: #ffffff;
+}
+
+.team-id {
+  width: 100%;
+  height: 1vw;
+  overflow: hidden;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.85vw;
+  margin-left: -0.18vw;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.42);
+}
+
+.team-line {
+  position: absolute;
+  float: right;
+  width: 0.1vw;
+  margin-left: 8.15vw;
+  margin-top: 0.65vw;
+  height: 6.8vw;
+  background-color: rgba(128, 128, 128, 0.209);
+}
+
+#team-line-blue-2 {
+  position: absolute;
+  float: right;
+  width: 0.1vw;
+  margin-top: 0vw;
+  height: 6.8vw;
+  background-color: rgba(128, 128, 128, 0.209);
+}
+
+.inputMenuBG {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.İnputMenu {
+  width: 33.9583vw;
+  height: 15.4167vw;
+  border-radius: 0.3342vw;
+  border: 0.0955vw solid #ffffff34;
+  background: radial-gradient(
+      73.99% 95.61% at 50.05% 100%,
+      rgba(118, 118, 118, 0.35) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    radial-gradient(
+      89.58% 89.58% at 50% 50%,
+      rgba(9, 9, 13, 0.7) 0%,
+      rgba(9, 9, 13, 0) 100%
+    );
+}
+
+.İnputMenuTitle {
+  width: 100%;
+  margin-top: 1.3542vw;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  font-family: Barlow;
+  font-size: 2.0833vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 99.5%; /* 39.8px */
+}
+
+.İnputMenuTitle p {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Barlow;
+  font-size: 1.25vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 99.5%;
+}
+
+.passwordinput {
+  border-radius: 0.1563vw;
+  border: 0.0521vw solid rgba(255, 255, 255, 0.17);
+  background: rgba(255, 255, 255, 0.15);
+  width: 13.5938vw;
+  height: 3.2813vw;
+  color: rgba(255, 255, 255, 0.45);
+  text-align: center;
+  font-family: Barlow;
+  font-size: 1.25vw;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-left: 10.1823vw;
+  margin-top: 1.1417vw;
+  transition: 0.3s;
+}
+
+.passwordjoincreate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10.2425vw;
+  height: 2.3099vw;
+  border: 0.1722vw solid rgba(0, 0, 0, 0.15);
+  background: linear-gradient(
+    180deg,
+    #49c96d 0%,
+    rgba(73, 201, 109, 0) 142.86%
+  );
+  color: rgba(0, 0, 0, 0.48);
+  text-align: center;
+  font-family: Barlow;
+  font-size: 1.2058vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 99.5%; /* 23.035px */
+  margin-left: 11.849vw;
+  margin-top: 1.5104vw;
+  transition: 0.3s;
+}
+
+.PasswordWarning {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0.8505vw;
+}
+
+.PasswordWarning > .icon {
+  width: 0.9282vw;
+  height: 0.8333vw;
+  background-image: url("./img/info.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.PasswordWarning > .text {
+  color: rgba(255, 255, 255, 0.47);
+  font-family: Barlow;
+  font-size: 0.5208vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.0104vw;
+  margin-left: 0.2698vw;
+  margin-top: 0.1vw;
+  overflow: hidden;
+  height: 0.6508vw;
+}
+
+.İnputclose {
+  position: absolute;
+  margin-left: 31.7vw;
+  margin-top: 0.5vw;
+  width: 1.7vw;
+  height: 1.7vw;
+  border-radius: 0.2604vw;
+  border: 0.1042vw solid #cb4040;
+  background: radial-gradient(
+    108.77% 108.77% at 50% 50%,
+    rgba(198, 50, 50, 0.5) 0%,
+    rgba(198, 50, 50, 0) 100%
+  );
+  color: #cb4040;
+  text-align: center;
+  font-family: Barlow;
+  font-size: 1.1166vw;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  transition: 0.3s;
+}
+
+.İnputclose:hover {
+  cursor: pointer;
+  border: 0.1042vw solid #cb40407b;
+}
+
+.Time:hover {
+  border: 0.0521vw solid rgba(255, 255, 255, 0.17);
+  background: rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+}
+
+.TimeFunc:hover {
+  border: 0.0521vw solid rgba(255, 255, 255, 0.27);
+  background: rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+}
+
+.previous:hover,
+.next:hover {
+  cursor: pointer;
+  border-radius: 0.2083vw;
+  border: 0.0521vw solid #2d2d38;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.Server:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+.xxs:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.CreateLobby:hover,
+.ServerJoin:hover,
+.passwordjoincreate:hover,
+.passwordinput:hover {
+  cursor: pointer;
+  scale: 1.05;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(
+      34.67% 21.85% at 50% 0%,
+      #111115 0%,
+      rgba(17, 17, 21, 0) 100%
+    ),
+    radial-gradient(
+      34.67% 21.85% at 50% 0%,
+      #111115 0%,
+      rgba(17, 17, 21, 0) 100%
+    );
+  position: absolute;
+  z-index: -1;
+}
+
+.scoreboard-list {
+  width: 29%;
+  height: 13%;
+  margin-top: 1%;
+}
+
+.red-team-bar {
+  height: 100%;
+  width: 32.1%;
+  float: right;
+  background: radial-gradient(
+      73.99% 95.61% at 50.05% 100%,
+      rgba(218, 68, 68, 0.108) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    radial-gradient(
+      89.58% 89.58% at 50% 50%,
+      rgba(9, 9, 13, 0.6) 0%,
+      rgba(9, 9, 13, 0) 100%
+    ),
+    rgba(9, 9, 13, 0.81);
+  border: 0.15vw solid rgba(191, 83, 83, 0.37);
+  border-radius: 0.25vw;
+}
+
+.time-bar {
+  height: 100%;
+  width: 32.1%;
+  float: right;
+  margin-right: 0.5vw;
+}
+
+.blue-team-bar {
+  height: 100%;
+  width: 32.1%;
+  float: right;
+  background: radial-gradient(
+      73.99% 95.61% at 50.05% 100%,
+      rgba(47, 98, 231, 0.108) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    radial-gradient(
+      89.58% 89.58% at 50% 50%,
+      rgba(9, 9, 13, 0.6) 0%,
+      rgba(9, 9, 13, 0) 100%
+    ),
+    rgba(9, 9, 13, 0.81);
+  border: 0.15vw solid rgba(47, 98, 231, 0.33);
+  border-radius: 0.25vw;
+  margin-right: 0.5vw;
+}
+
+.teaming {
+  width: 100%;
+  height: 1vw;
+  margin-top: 0.9vw;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2vw;
+  text-align: center;
+  color: #da4444;
+}
+
+.score-status {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 3.1vw;
+  text-align: center;
+  color: #ffffff;
+}
+
+.teaming-blue {
+  width: 100%;
+  height: 1vw;
+  margin-top: 0.9vw;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2vw;
+  text-align: center;
+  color: #2f62e7;
+}
+
+.timer-bar {
+  width: 90%;
+  margin-left: 5%;
+  height: 38%;
+  background: radial-gradient(
+      89.58% 89.58% at 50% 50%,
+      rgba(9, 9, 13, 0.6) 0%,
+      rgba(9, 9, 13, 0) 100%
+    ),
+    rgba(9, 9, 13, 0.81);
+  border: 0.1vw solid rgba(45, 45, 56, 0.6);
+  border-radius: 0.15vw;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2vw;
+  line-height: 2.5vw;
+  text-align: center;
+  letter-spacing: 0.12em;
+  color: #ffffff;
+}
+
+.time-text2 {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9vw;
+  text-align: center;
+  margin-top: 2%;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.41);
+}
+
+.PlayerList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 30%;
+  margin-left: 5%;
+  margin-top: 3%;
+  background: radial-gradient(
+      89.58% 89.58% at 50% 50%,
+      rgba(9, 9, 13, 0.1) 0%,
+      rgba(9, 9, 13, 0) 100%
+    ),
+    rgba(9, 9, 13, 0.81);
+  border: 0.1vw solid rgba(45, 45, 56, 0.1);
+}
+
+.PlayerListProfile {
+  border-radius: 0.15vw;
+  width: 20%;
+  height: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Windows_10_Default_Profile_Picture.svg/1024px-Windows_10_Default_Profile_Picture.svg.png");
+  font-weight: 800;
+  font-size: 1.2vw;
+  color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profilePhotoImg:hover {
+  scale: 1.05;
+  cursor: pointer;
+}
+
+.time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(
+    42.02% 33.43% at 50% 50%,
+    #09090d 0%,
+    rgba(9, 9, 13, 0) 100%
+  );
+}
+
+.time-text {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 9vw;
+  letter-spacing: 0.12em;
+  background: radial-gradient(
+    92.55% 92.55% at 50% 50%,
+    #d24a4a 0%,
+    #250303 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.black {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: black;
+}
+
+.black-text {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3vw;
+  letter-spacing: 0.12em;
+  color: white;
+}
+
+.black-time-text {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 9vw;
+  letter-spacing: 0.12em;
+  background: radial-gradient(
+    92.55% 92.55% at 50% 50%,
+    #d24a4a 0%,
+    #250303 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  text-align: center;
+}
+
+.win {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(
+    42.02% 33.43% at 50% 50%,
+    #09090d 0%,
+    rgba(9, 9, 13, 0) 100%
+  );
+}
+
+.win-text {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 9vw;
+  letter-spacing: 0.12em;
+  background: radial-gradient(
+    92.55% 92.55% at 50% 50%,
+    #00ff85 0%,
+    #003114 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.lose {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(
+    42.02% 33.43% at 50% 50%,
+    #09090d 0%,
+    rgba(9, 9, 13, 0) 100%
+  );
+}
+
+.lose-text {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 9vw;
+  letter-spacing: 0.12em;
+  background: radial-gradient(
+    92.55% 92.55% at 50% 50%,
+    #d24a4a 0%,
+    #250303 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.draw {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(
+    42.02% 33.43% at 50% 50%,
+    #09090d 0%,
+    rgba(9, 9, 13, 0) 100%
+  );
+}
+
+.draw-text {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 9vw;
+  letter-spacing: 0.12em;
+  background: radial-gradient(
+    92.55% 92.55% at 50% 50%,
+    #ffffff 0%,
+    #250303 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.keyboardInfo {
+  gap: 2vw;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.keyboardBoxs {
+  position: relative;
+  gap: 0.5vw;
+  align-items: center;
+  display: flex;
+  bottom: 0;
+  right: 0;
+}
+
+.keyboardBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.6vw;
+  height: 1.6vw;
+  background: radial-gradient(
+      89.58% 89.58% at 50% 50%,
+      rgba(9, 9, 13, 0.1) 0%,
+      rgba(9, 9, 13, 0) 100%
+    ),
+    rgba(9, 9, 13, 0.81);
+  border: 0.1vw solid rgba(45, 45, 56, 0.1);
+  border-radius: 0.2132vw;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.659vw;
+  line-height: 0.7813vw;
+  color: #ffffff;
+}
+
+.keyboardBoxText {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.8854vw;
+  line-height: 1.0417vw;
+
+  color: #ffffff;
+}
+
+.keyboardgeneralBox {
+  position: absolute;
+  display: flex;
+  gap: 2.5vw;
+  bottom: 2.8vw;
+  right: 2.8vw;
+}

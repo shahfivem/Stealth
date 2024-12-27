@@ -1,0 +1,53 @@
+-- Add items into [qb]/qb-core/shared/items.lua if on QBCore
+-- Add items into qs-inventory/shared/items.lua if on ESX
+['auto_parts'] = {
+    ['name'] = 'auto_parts',
+    ['label'] = 'Auto Parts',
+    ['weight'] = 5,
+    ['type'] = 'item',
+    ['image'] = 'auto_parts.png',
+    ['unique'] = false,
+    ['useable'] = false,
+    ['shouldClose'] = true,
+    ['combinable'] = nil,
+    ['description'] = nil
+},
+
+['chop_lockpick'] = {
+    ['name'] = 'chop_lockpick',
+    ['label'] = 'Lockpick',
+    ['weight'] = 150,
+    ['type'] = 'item',
+    ['image'] = 'chop_lockpick.png',
+    ['unique'] = false,
+    ['useable'] = false,
+    ['shouldClose'] = true,
+    ['combinable'] = nil,
+    ['description'] = nil
+},
+
+['chop_torch'] = {
+    ['name'] = 'chop_torch',
+    ['label'] = 'Torch',
+    ['weight'] = 275,
+    ['type'] = 'item',
+    ['image'] = 'chop_torch.png',
+    ['unique'] = false,
+    ['useable'] = false,
+    ['shouldClose'] = true,
+    ['combinable'] = nil,
+    ['description'] = nil
+},
+
+['chop_lugwrench'] = {
+    ['name'] = 'chop_lugwrench',
+    ['label'] = 'Lug Wrench',
+    ['weight'] = 225,
+    ['type'] = 'item',
+    ['image'] = 'chop_lugwrench.png',
+    ['unique'] = false,
+    ['useable'] = false,
+    ['shouldClose'] = true,
+    ['combinable'] = nil,
+    ['description'] = nil
+},

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Advanced Gang System</title>
+        <link href="css/style.css" rel="stylesheet">
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <div class="homePageContainer" id="homePage">
+            <div id="closeIcon" class="form-content" onclick="hideUI()"><strong>X</strong></div>
+            <br>
+            <br>
+            <img id="gangImage" src="" width=300rem; alt="Gang Image">
+            <br>
+            <br>
+            <br>
+            <table style="border: 0.25rem solid black; border-collapse: collapse;">
+                <tr>
+                    <td><strong>Gang Name:</strong></td>
+                    <td><span id="gangName">N/A</span></td>
+                </tr>
+                <tr></tr>
+                    <td><strong>Prevalence:</strong></td>
+                    <td><span id="prevalenceStars"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Gang Rank:</strong></td>
+                    <td><span id="gradeName">N/A</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Gang Status:</strong></td>
+                    <td><span id="gangStatus">N/A</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Home Turf:</strong></td>
+                    <td><span id="homeTurf">N/A</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Online Members:</strong></td>
+                    <td><span id="count">0</span></td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            <button id="gangHelpButton" class="button" onclick="showGangHelpMenu()">Gang Help</button>
+        </div>   
+    </body>
+</html>

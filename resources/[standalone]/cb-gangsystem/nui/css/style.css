@@ -1,0 +1,211 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.homePageContainer {
+    display: none; /* Hide the box by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #237c22;
+    padding: 40px; /* Increase padding for a bigger box */
+    border: 5px solid black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional box shadow */
+    width: 20%; /* Set a specific width */
+    height: 60%;
+    text-align: center;
+}
+
+textarea {
+    height: 30%;
+    max-height: 30%;
+    width: 100%;
+    max-width: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 250%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0.5rem;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding: 5%;
+}
+
+input[type="text"] {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    padding: 1rem 2rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Style for horizontal navigation */
+#horizontalNav {
+    background-color: black;
+    color: white;
+}
+
+#horizontalNav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Display items horizontally */
+}
+
+#horizontalNav ul li {
+    padding: 1rem;
+}
+
+#horizontalNav ul li a {
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+}
+
+#horizontalNav ul li a:hover {
+    color: #237c22;
+}
+
+/* Style for close icon */
+#horizontalNav ul li:last-child {
+    margin-left: auto; /* Pushes the close button to the right */
+}
+
+#horizontalNav ul li:last-child a {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
+
+#horizontalNav ul li:last-child a:hover {
+    color: red;
+}
+
+/* Style for close icon */
+#closeIcon {
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 0.125rem;
+    padding: 0.25rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+}
+
+#closeIcon:hover {
+    color: red;
+}
+
+button {
+    border: 0.125rem solid black;
+    border-radius: 0.5rem;
+    background-color: black;
+    color: #237c22;
+    font-size: 1.5rem;
+}
+
+button:hover {
+    border: 0.125rem solid black;
+    border-radius: 0.5rem;
+    background-color: #237c22;
+    color: black;
+    cursor: pointer;
+}
+
+.submit {
+    border: 0.125rem solid black;
+    border-radius: 0.5rem;
+    background-color: black;
+    color: #237c22;
+    font-size: 1.5rem;
+}
+
+.submit:hover {
+    border: 0.125rem solid black;
+    border-radius: 0.5rem;
+    background-color: #237c22;
+    color: black;
+}
+
+#homePage {
+    overflow-y: scroll; /* Always show a scrollbar */
+    scrollbar-width: none; /* Hide the scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hide the scrollbar in IE and Edge */
+}
+
+/* Hide the scrollbar track */
+#homePage::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar in Webkit browsers (e.g., Chrome, Safari) */
+}
+
+p {
+    font-size: 1.25rem;
+}
+
+table {
+    font-size: 1.25rem;
+    text-align: center;
+    margin: auto;
+    border: 0.25rem solid black;
+    background-color: #fff;
+}
+
+td {
+    padding: 0.25rem;
+    border-bottom: 1px solid black;
+}
+
+td .last-row {
+    padding: 0.25rem;
+    border-bottom: none;
+}
+
+.qa-table td {
+    border-right: 1px solid black;
+    text-align: center; /* Horizontally center align */
+    vertical-align: middle; /* Vertically center align */
+}
+
+.qa-table .question {
+    width: 20rem;
+}
+
+.qa-table .last-cell {
+    border-right: none; /* Remove right border for the last cell */
+}
+
+.qa-table .last-row td{
+    border-bottom: none; /* Remove right border for the last cell */
+}
+
+#question4 {
+    display: none;
+}

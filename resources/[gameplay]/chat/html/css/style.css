@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+.color-0{color: #ffffff;}
+.color-1{color: #ff4444;}
+.color-2{color: #99cc00;}
+.color-3{color: #ffbb33;}
+.color-4{color: #0099cc;}
+.color-5{color: #33b5e5;}
+.color-6{color: #aa66cc;}
+.color-8{color: #cc0000;}
+.color-9{color: #cc0068;}
+
+* {
+  font-family: "Oswald";
+  margin: 0;
+  padding: 0;
+  text-shadow: 0px 0px 0px black;
+  
+}
+
+.no-grow {
+  flex-grow: 0;
+}
+
+em {
+  font-style: normal;
+}
+
+#app {
+  color: white;
+  width: 500px;
+  margin-top: 35px;
+}
+
+.chat-window {
+  position: relative;
+  top: 5px;
+  left: 10px;
+  max-height: 500px;
+  width: 500px;
+  height: auto;
+}
+
+.chat-messages {
+  position: relative;
+  height: auto;
+  max-height: 500px;
+  font-size: 16px;
+  margin: 5px;
+  width: 480px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.chat-input {
+  font-size: 18px;
+  position: relative;
+  left: 25px;
+  top: 5px;
+  box-sizing: border-box;  
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.prefix {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+}
+
+textarea {
+  font-size: 18px;
+  line-height: 27px;
+  display: block;
+  box-sizing: border-box;
+  padding: 2px;
+  padding-top: 12px;
+  padding-left: 35px;
+  color: white;
+  border-radius: 3px;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(43, 57, 98, 0.4) 0%, rgba(36, 39, 63, 0.7) 100%); 
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  width: 500px;
+  height: 54px;
+  outline: none;
+  overflow: hidden;
+  resize: none;
+  z-index: 0;
+}
+
+.msg {
+
+}
+
+.chat-message {
+  background: radial-gradient(50% 50% at 50% 50%, rgba(43, 57, 98, 0.4) 0%, rgba(36, 39, 63, 0.7) 100%);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  border-radius: 3px;
+  color: #fff;
+  margin-top: 10px;
+  padding: 8px;
+  display: inline-block;
+  line-height: 26px;
+  width: auto;
+  float: left;
+  margin-left: 10px;    
+}
+
+.chat-message > .status,
+.chat-message > .normal,
+.chat-message > .phone {
+  font-weight: bold;
+  color: #FC9C56;
+  display: inline-block;
+}
+
+.chat-message > .ooc {
+  font-weight: bold;
+  color: #56FCFC;
+  display: inline-block;
+}
+
+.chat-message > .server,
+.chat-message > .staff,
+.chat-message > .system,
+.chat-message > .console {
+  font-weight: bold;
+  color: #E93030;
+  display: inline-block;
+}
+
+.chat-message > .medical {
+  font-weight: bold;
+  color: #f77878;
+  display: inline-block;
+}
+
+
+.chat-message > .resourcemanage {
+  font-weight: bold;
+  color: #a978f7;
+  display: inline-block;
+}
+
+/* Not used?? */
+.chat-message > .walk {
+  font-weight: bold;
+  color: #126bbd;
+  display: inline-block;
+}
+
+.multiline {
+  margin-left: 1.5rem;
+  text-indent: -1.5rem;
+  white-space: pre-line;
+}
+
+.suggestions {
+  position: relative;
+  list-style-type: none;
+  padding: 2px;
+  width: 500px;
+  padding-left: 27px;
+  font-size: 18px;
+  box-sizing: border-box;
+  color: white;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(43, 57, 98, 0.4) 0%, rgba(36, 39, 63, 0.7) 100%);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.help {
+  font-size: 14px;
+  font-weight: 400;
+  color: #b0bbbd;
+}
+
+.disabled {
+  color: #b0bbbd;
+}
+
+.suggestion {
+  margin-bottom: 5px;
+}
+
+.hidden {
+  display: none;
+}

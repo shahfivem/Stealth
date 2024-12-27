@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+   
+}
+
+#container {
+    position: absolute;
+    height: auto;
+    top: 15%;
+    right: 10%;
+    background: transparent !important;
+    font-family: 'Oswald', sans-serif !important;
+}
+
+
+html,body {
+    background: transparent !important;
+}
+
+#menu::-webkit-scrollbar {
+    display: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+#menu {
+    display: flex;
+    overflow-x: none;
+    overflow-y: auto;
+    flex-direction: column;
+    max-height: 52.1vh;
+}
+
+.button {
+
+    cursor: pointer;
+    transition: 0.3s all;
+
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(43, 57, 98, 0.6) 0%, rgba(36, 39, 63, 0.7) 90%);
+    border-radius: 0.3vh;
+	font-family: 'Oswald', sans-serif !important;
+    font-size: 1.2vh;
+	font-weight: bold;
+	color: #eaeaea;
+    padding: 10px 1px 10px 10px;
+    margin:3px;
+    transition: all 0.5s;
+    border: 2px solid transparent;
+
+    opacity: 1;
+
+}
+
+.button.false {
+    opacity: 0.8;
+    cursor: default;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(175, 182, 201, 0.6) 0%, rgba(49, 50, 58, 0.7) 90%);
+}
+
+.button.warning {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(98, 43, 43, 0.6) 0%, rgba(63, 36, 36, 0.7) 90%);
+}
+
+.button.warning.true:hover {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(98, 43, 43, 0.6) 0%, rgba(63, 36, 36, 0.7) 100%);
+    box-shadow: 0px 2px 6px rgba(253, 86, 86, 0.5);
+    border: 2px solid transparent;
+    border-image: linear-gradient(to bottom, #fd5656 0%, #a74e4e 100%);
+    border-image-slice: 1;
+}
+
+.button.success {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(43, 98, 55, 0.6) 0%, rgba(40, 63, 36, 0.7) 90%);
+}
+
+.button.success.true:hover {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(43, 98, 55, 0.6) 0%, rgba(40, 63, 36, 0.7) 100%);
+    box-shadow: 0px 2px 6px rgba(86, 253, 100, 0.5);
+    border: 2px solid transparent;
+    border-image: linear-gradient(to bottom, #5cfd56 0%, #4ea752 100%);
+    border-image-slice: 1;
+}
+
+.button.normal.true:hover {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(43, 57, 98, 0.6) 0%, rgba(36, 39, 63, 0.7) 100%);
+    box-shadow: 0px 2px 6px rgba(86, 253, 253, 0.5);
+    border: 2px solid transparent;
+    border-image: linear-gradient(to bottom, #56FDFD 0%, #4E65A7 100%);
+    border-image-slice: 1;
+}
+
+
+.menuitem-left {
+    flex: 90%;
+    display: flex;  
+    justify-content: center;
+    flex-direction: column;
+}
+
+.menuitem-right {
+    flex: 5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 24px;
+
+}
+
+.menuitem-left > .title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+.menuitem-left > .sticky {
+    font-style: normal;
+    font-weight: normal;
+    position: fixed;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.menuitem-left > .description {
+    font-weight: 400;
+    font-size: 14px;
+    color: #DADADA;
+    line-height: normal;
+}
+
+img {
+    position: absolute;
+    top: -22px;
+    left: -205px;
+
+    width: 200px;
+    height: 200px;
+
+    object-fit: contain;
+
+    transition: all 0.3s;
+}

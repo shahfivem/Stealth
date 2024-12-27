@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<PedAnims>
+	<Anim dict="lunyx@buddies01a" name="buddies01a" />
+	<Anim dict="lunyx@buddies01b" name="buddies01b" />
+	<Anim dict="lunyx@buddies02a" name="buddies02a" />
+	<Anim dict="lunyx@buddies02b" name="buddies02b" />
+	<Anim dict="lunyx@buddies03a" name="buddies03a" />
+	<Anim dict="lunyx@buddies03b" name="buddies03b" />
+	<Anim dict="lunyx@buddies04a" name="buddies04a" />
+	<Anim dict="lunyx@buddies04b" name="buddies04b" />
+	<Anim dict="lunyx@buddies05a" name="buddies05a" />
+	<Anim dict="lunyx@buddies05b" name="buddies05b" />
+</PedAnims>

@@ -1,0 +1,56 @@
+Loc["se"] = {
+    info = {
+        ['button'] = "[E] - ",
+        ['lockpick'] = "Lockpicka dörren",
+        ['enter'] = "Gå in i huset",
+        ['exit'] = "Lämna huset",
+        ['firstprogressbar'] = "Kollar runt..",
+        ['secondprogressbar_drawers'] = "Söker igenom..",
+        ["checking"] = "Låt mig kolla..",
+    },
+
+    error = {
+        ["cops"] = "Försök igen senare..",
+        ["no_lockpick"] = "Hur ska du låsa upp dörren?",
+        ["door_open"] = "Dörren är redan öppen",
+        ["high_security"] = "Säkerhetsnivån är väldigt hög",
+        ["light"] = "Inte en smart idé att göra detta just nu..",
+        ["failed"] = "Misslyckades..",
+        ["stolen"] = "Inget mer här..",
+        ["busy"] = "Redan upptagen med att låsa upp..",
+        ["empty"] = "Tomt..",
+        ["nothing"] = "Du hittade ingenting..",
+        ["cooldown"] = "Du är fortfarande trött från det senaste rånet..",
+        ["skill"] = "Det här är svårt för mig att bryta mig in i..",
+        ["no_permission"] = "Du har inte behörighet att använda det",
+        ["already_searched"] = "Redan sökt igenom..",
+        ["glitch"] = "Fint försök..",
+        ["inventory_full"] = "Your inventory is full",
+    },
+
+    success = {
+        ["success"] = "Du bröt dig in i huset!",
+    },
+    
+    group = {
+        ["stage1"] = "Låsa upp dörren",
+        ["stage2"] = "Sök igenom %s/%s platser",
+        ["stage3"] = "Lämna huset",
+        ["task_status"] = "Husrån",
+        ["npc"] = 'Fråga efter information om ett jobb',
+        ["gps"] = "Jag har markerat din GPS med huset som ska rånas, du har %s minuter",
+        ["no_group"] = 'Du är inte i en grupp',
+        ["no_job"] = "Du har inte en grupp eller ett jobb",
+        ["not_leader"] = 'Du är inte gruppens ledare',
+        ["no_location"] = 'Jag har inga fler platser, kom tillbaka senare',
+        ["npc_time"] = "Jag har inga fler jobb för dig, kom tillbaka senare",
+        ["not_marked"] = "Detta hus är inte markerat för rån..",
+        ["already"] = "Din grupp är redan upptagen med ett aktivt jobb!",
+        ["limit"] = "Din grupp kan bara ha högst %s deltagare för detta.",
+        ["group_busy"] = "Din grupp är för närvarande upptagen med ett annat jobb.",
+        ["blip_name"] = "Inbrott",
+        ["not_time"] = "Det är farligt att göra detta i dagsljus!",
+        ["minimum"] = "Du behöver fler personer i din grupp för att göra detta jobb",
+    },
+}
+-- Everything was translated by Project X Team translator Greken!
