@@ -326,41 +326,66 @@ end)
 function SpawnVan()
 	TriggerEvent('erp-cargodeliveries:requestVehicle')
 end
-CreateThread(function()
-	-- Starter Ped
-	local pedModel = `g_m_m_chemwork_01`
-	RequestModel(pedModel)
-	while not HasModelLoaded(pedModel) do Wait(10) end
-	local ped = CreatePed(0, pedModel, Config.StartLocation.x, Config.StartLocation.y, Config.StartLocation.z-1.0, Config.StartLocation.w, false, false)
-	TaskStartScenarioInPlace(ped, 'WORLD_HUMAN_CLIPBOARD', true)
-	FreezeEntityPosition(ped, true)
-	SetEntityInvincible(ped, true)
-	SetBlockingOfNonTemporaryEvents(ped, true)
-	-- Target
-	exports.ox_target:addLocalEntity(ped, {
-		{
-			icon = 'fas fa-capsules',
-			label = 'Start Run ($' .. Config.StartOxyPayment .. ')',
-			onSelect = function()
-				lib.notify({
-					type = 'inform',
-					text = 'Hold your push to talk key..'
-				})
-				local k = exports.erp_progressbar:taskBar({
-					text = 'Speak to the chemist',
-					length = 10000,
-					keepweapon = true,
-					vehicle = false,
-					distcheck = 10.0,
-					speaking = true,
-				}) == 100 if k then
-				TriggerEvent('qb-oxyruns:client:StartOxy')
-				end
-			end
-		}
-	})
-	
-end)
+-- Pre-load Ped Model
+local function preloadPedModel(model)
+    RequestModel(model)
+    while not HasModelLoaded(model) do
+        Wait(10)
+    end
+end
+
+-- Create Ped at Start Location
+local function createStarterPed()
+    local pedModel = `g_m_m_chemwork_01`
+    preloadPedModel(pedModel)
+
+    local ped = CreatePed(0, pedModel, Config.StartLocation.x, Config.StartLocation.y, Config.StartLocation.z - 1.0, Config.StartLocation.w, false, false)
+    TaskStartScenarioInPlace(ped, 'WORLD_HUMAN_CLIPBOARD', true)
+    FreezeEntityPosition(ped, true)
+    SetEntityInvincible(ped, true)
+    SetBlockingOfNonTemporaryEvents(ped, true)
+
+    return ped
+end
+
+-- Add Target to Ped
+local function addTargetToPed(ped)
+    exports.ox_target:addLocalEntity(ped, {
+        {
+            icon = 'fas fa-capsules',
+            label = 'Start Run ($' .. Config.StartOxyPayment .. ')',
+            onSelect = function()
+                lib.notify({
+                    type = 'inform',
+                    text = 'Hold your push to talk key..'
+                })
+
+                local taskCompleted = exports.erp_progressbar:taskBar({
+                    text = 'Speak to the chemist',
+                    length = 10000,
+                    keepweapon = true,
+                    vehicle = false,
+                    distcheck = 10.0,
+                    speaking = true,
+                }) == 100
+
+                if taskCompleted then
+                    TriggerEvent('qb-oxyruns:client:StartOxy')
+                end
+            end
+        }
+    })
+end
+
+-- Initialize Starter Ped and Target
+local function initializeOxyStarter()
+    local ped = createStarterPed()
+    addTargetToPed(ped)
+end
+
+-- Call Initialization
+initializeOxyStarter()
+
 
 
 local packages = {}

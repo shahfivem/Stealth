@@ -62,67 +62,75 @@ local function handleProcess(location)
     end
 end
 
-Citizen.CreateThread(function()
-    for name, location in pairs(Shared.Locations) do    
-        if Shared.peds then
+-- Pre-load all ped models to avoid delays
+local function preloadModels()
+    for _, location in pairs(Shared.Locations) do
+        if Shared.peds and location.pedModel then
             local pedHash = GetHashKey(location.pedModel)
             RequestModel(pedHash)
             while not HasModelLoaded(pedHash) do
                 Wait(100)
             end
-
-            local ped = CreatePed(4, pedHash, location.pedCoords.x, location.pedCoords.y, location.pedCoords.z, location.pedCoords.w, false, true)
-
-            if DoesEntityExist(ped) then
-                SetEntityAsMissionEntity(ped, true, true)
-                FreezeEntityPosition(ped, true)
-                SetBlockingOfNonTemporaryEvents(ped, true)
-                SetEntityInvincible(ped, true)
-
-                exports['ox_target']:addLocalEntity(ped, {
-                    {
-                        name = location.label .. '_ped',
-                        icon = location.oxTargetIcon,
-                        label = location.oxTargetLabel,
-                        onSelect = function()
-                            handleProcess(location)
-                        end
-                    }
-                })
-            else
-                print("Error: Ped not created for " .. name)
-            end
-        else
-            exports.ox_target:addBoxZone({
-                coords = location.coords,
-                name = name .. "_zone",
-                size = vec3(location.size, location.size, 1.0),
-                debug = location.debug,
-                options = {
-                    {
-                        label = location.oxTargetLabel,
-                        icon = location.oxTargetIcon,
-                        onSelect = function()
-                            handleProcess(location)
-                        end
-                    }
-                }
-            })
         end
     end
-end)
+end
 
-RegisterNetEvent('link-processing:useItem')
-AddEventHandler('link-processing:useItem', function(duration)
-    local playerPed = PlayerPedId()
+-- Create ped and add ox_target
+local function createPed(location)
+    local pedHash = GetHashKey(location.pedModel)
+    local ped = CreatePed(4, pedHash, location.pedCoords.x, location.pedCoords.y, location.pedCoords.z, location.pedCoords.w, false, true)
 
-    SetEntityInvincible(playerPed, true)
-    SetEntityCanBeDamaged(playerPed, false)
+    if DoesEntityExist(ped) then
+        SetEntityAsMissionEntity(ped, true, true)
+        FreezeEntityPosition(ped, true)
+        SetBlockingOfNonTemporaryEvents(ped, true)
+        SetEntityInvincible(ped, true)
 
-    Citizen.SetTimeout(duration, function()
-        SetEntityInvincible(playerPed, false)
-        SetEntityCanBeDamaged(playerPed, true)
+        exports['ox_target']:addLocalEntity(ped, {
+            {
+                name = location.label .. '_ped',
+                icon = location.oxTargetIcon,
+                label = location.oxTargetLabel,
+                onSelect = function()
+                    handleProcess(location)
+                end
+            }
+        })
+    else
+        print("Error: Ped not created for " .. location.label)
+    end
+end
 
-        TriggerEvent('ox_lib:notify', {description = "Your invincibility to stunguns has ended.", type = 'info'})
-    end)
-end)
+-- Create a box zone for non-ped targets
+local function createBoxZone(location)
+    exports.ox_target:addBoxZone({
+        coords = location.coords,
+        name = location.label .. "_zone",
+        size = vec3(location.size, location.size, 1.0),
+        debug = location.debug,
+        options = {
+            {
+                label = location.oxTargetLabel,
+                icon = location.oxTargetIcon,
+                onSelect = function()
+                    handleProcess(location)
+                end
+            }
+        }
+    })
+end
+
+-- Setup all locations
+local function setupLocations()
+    for name, location in pairs(Shared.Locations) do
+        if Shared.peds then
+            createPed(location)
+        else
+            createBoxZone(location)
+        end
+    end
+end
+
+-- Initialization
+preloadModels()
+setupLocations()
