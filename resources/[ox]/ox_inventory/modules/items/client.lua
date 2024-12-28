@@ -118,6 +118,21 @@ local drugs = {
             rotation = vector3(0, 0, 0),
         },
     },
+    refinedmeth = {
+        usetime = 5000,
+        label = "Snorting Cocaine",
+        effects = {
+            timecycle = { effect = "DRUG_gas_huffing", duration = 30000 },
+            speedBoost = { multiplier = 1.5, duration = 30000 },
+            preventRagdoll = { duration = 30000 },
+        },
+        prop = {
+            model = "prop_rolled_sock_02",
+            bone = 60309,
+            offset = vector3(0.1, 0, 0),
+            rotation = vector3(0, 0, 0),
+        },
+    },
     fent = {
         usetime = 4000,
         label = "Fentanyl",
@@ -132,33 +147,25 @@ local drugs = {
     },
     teapot_bloomjoint = {
         usetime = 4000,
-        label = "Bloom Joint",
+        label = "Smoking Bloom Joint",
         effects = {
-            timecycle = { effect = "NG_filmic14", duration = 25000 },
+            timecycle = { effect = "BloomMid", duration = 25000 },
             armour = 15,
             stress = 25
         },
-        animation = {
-            dict = "amb@world_human_smoking@male@male_b@base",
-            anim = "base",
-            duration = 4000,
-        },
         requiredItems = { "lighter", "teapotlighter" },
+        joint = true, -- Indicates this is a joint
     },
-    teapot_serentiyjoint = {
+    teapot_serenityjoint = {
         usetime = 4000,
-        label = "Serenity Joint",
+        label = "Smoking Serenity Joint",
         effects = {
-            timecycle = { effect = "NG_filmic14", duration = 25000 },
+            timecycle = { effect = "DRUG_2_drive", duration = 25000 },
             armour = 15,
             stress = 25
         },
-        animation = {
-            dict = "amb@world_human_smoking@male@male_b@base",
-            anim = "base",
-            duration = 4000,
-        },
         requiredItems = { "lighter", "teapotlighter" },
+        joint = true, -- Indicates this is a joint
     },
     -- Add more drugs here
 }
@@ -212,42 +219,86 @@ local function useDrugItem(itemName, data, slot)
     local drugData = drugs[itemName]
     if not drugData then return end
 
-    local ped = cache.ped
+    if not canJoint then
+        lib.notify({ description = "You can't use this right now. Wait for the effects to wear off.", type = "error" })
+        return
+    end
+
+    canJoint = false -- Prevent further item use during effects
+
+    local ped = PlayerPedId()
+    local bluntProp = nil -- Variable to store the created prop
 
     -- Check for required items
     if drugData.requiredItems and not hasRequiredItem(drugData.requiredItems) then
         lib.notify({ description = "You need a lighter to use this!", type = "error" })
+        canJoint = true
         return
     end
 
-    -- Use the item
     ox_inventory:useItem(data, function(item)
         if item then
-            -- Play animation
-            if drugData.animation then
-                lib.requestAnimDict(drugData.animation.dict)
-                TaskPlayAnim(ped, drugData.animation.dict, drugData.animation.anim, 1.0, -1, drugData.animation.duration, 49, 0, false, false, false)
+            -- Handle Joint Animation and Prop
+            if drugData.joint then
+                local animDict = "amb@world_human_smoking_pot@male@base"
+                local animation = "base"
+
+                if IsPedArmed(ped, 7) then INVENTORY.ITEMS:SetEmptyHanded(false) end
+                if not IsEntityPlayingAnim(ped, animDict, animation, 3) then
+                    lib.requestAnimDict(animDict)
+                    TaskPlayAnim(ped, animDict, animation, 8.0, -8, -1, 49, 0, 0, 0, 0)
+                    lib.requestModel(`prop_cigar_01`) -- Replace with your joint prop if needed
+                    bluntProp = CreateObject(`prop_cigar_01`, GetEntityCoords(ped), true, true, false)
+                    AttachEntityToEntity(bluntProp, ped, GetPedBoneIndex(ped, 60309), 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, true, true, false, true, 1, true)
+                end
+            else
+                -- Play standard animation
+                if drugData.animation then
+                    lib.requestAnimDict(drugData.animation.dict)
+                    TaskPlayAnim(ped, drugData.animation.dict, drugData.animation.anim, 1.0, -1, drugData.animation.duration, 49, 0, false, false, false)
+                    Wait(drugData.animation.duration)
+                    ClearPedTasks(ped)
+                end
             end
 
             -- Progress bar
             local finished = exports["erp_progressbar"]:taskBar({
                 length = drugData.usetime,
                 text = drugData.label,
-                disable = {
-                    combat = true
-                }
+                disable = { combat = true },
             }) == 100
 
-            ClearPedTasks(ped)
-
-            -- Apply effects if finished
             if finished then
                 TriggerServerEvent('ox_inventory:removeItem', itemName, 1)
                 applyEffects(ped, drugData.effects)
+
+                -- Reset canJoint and delete prop after effects
+                CreateThread(function()
+                    Wait(drugData.effects.timecycle and drugData.effects.timecycle.duration or 0)
+                    if bluntProp and DoesEntityExist(bluntProp) then
+                        DeleteObject(bluntProp)
+                        bluntProp = nil
+                    end
+                    canJoint = true
+                end)
+            else
+                canJoint = true -- Reset on progress cancel
+                if bluntProp and DoesEntityExist(bluntProp) then
+                    DeleteObject(bluntProp)
+                    bluntProp = nil
+                end
+            end
+        else
+            canJoint = true -- Reset if item is invalid
+            if bluntProp and DoesEntityExist(bluntProp) then
+                DeleteObject(bluntProp)
+                bluntProp = nil
             end
         end
     end)
 end
+
+
 
 
 -- Define Drug Items
